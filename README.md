@@ -4,7 +4,6 @@ O **CattleWeight** é um projeto de *Machine Learning* e *AI Automation* que est
 
 A solução simula um cenário real do setor agropecuário, onde a pesagem manual pode gerar **imprecisão, inconsistência e baixa eficiência operacional**.
 
----
 
 ## 🚀 O que este projeto entrega
 
@@ -14,7 +13,6 @@ A solução simula um cenário real do setor agropecuário, onde a pesagem manua
 - 🔄 Base para automação com n8n
 - 🧠 Pipeline completo de Data Science documentado
 
----
 
 ## 🔌 Como usar a API
 
@@ -24,7 +22,6 @@ A solução simula um cenário real do setor agropecuário, onde a pesagem manua
 POST /predict
 ```
 
----
 
 ### 📥 Exemplo de requisição
 
@@ -40,7 +37,6 @@ POST /predict
 }
 ```
 
----
 
 ### 📤 Exemplo de resposta
 
@@ -64,7 +60,6 @@ POST /predict
 }
 ```
 
----
 
 ### 🔐 Autenticação
 
@@ -74,7 +69,6 @@ A API utiliza autenticação via header:
 Authorization: <PREDICTION_API_TOKEN>
 ```
 
----
 
 ### 🧪 Exemplo em Python
 
@@ -102,13 +96,11 @@ response = requests.post(url, json=data, headers=headers)
 print(response.json())
 ```
 
----
 
 ## 🎯 Objetivo do Projeto
 
 Criar um modelo de regressão que, a partir de características físicas do gado, estima o **peso do animal em quilogramas (kg)** de forma automatizada e consistente.
 
----
 
 ## 🧠 Pipeline de Data Science
 
@@ -139,7 +131,6 @@ O [**notebook do projeto**](main.ipynb) cobre as principais etapas:
 - Modelo salvo via `pickle`
 - Pronto para uso em produção
 
----
 
 ## 📊 Resultados
 
@@ -151,7 +142,6 @@ O [**notebook do projeto**](main.ipynb) cobre as principais etapas:
 
 📌 O problema apresentou comportamento majoritariamente linear, sendo bem resolvido por modelos simples.
 
----
 
 ## 🏗️ Arquitetura
 
@@ -163,7 +153,6 @@ O [**notebook do projeto**](main.ipynb) cobre as principais etapas:
                             [n8n]
 ```
 
----
 
 ## 🤖 Integração com LLM
 
@@ -173,7 +162,6 @@ Após a predição, o sistema pode gerar uma análise estruturada do animal, por
 - Avaliação de desenvolvimento
 - Sugestões de manejo
 
----
 
 ## 🔄 Automação com n8n
 
@@ -184,7 +172,6 @@ O projeto pode ser integrado com n8n para:
 - Aplicar regras de decisão
 - Enviar notificações (WhatsApp, email, etc.)
 
----
 
 ## 📁 Estrutura do Projeto
 
@@ -211,7 +198,6 @@ O projeto pode ser integrado com n8n para:
 └── loader.py     # Classe para carregar e armazenar informações dos datasets de entrada
 ```
 
----
 
 ## ⚙️ Como rodar o projeto
 
@@ -231,8 +217,6 @@ uvicorn API.endpoint:app --reload
 ```
 
 
----
-
 ## 💡 Possíveis melhorias
 
 - Deploy em cloud (AWS, GCP)
@@ -240,7 +224,6 @@ uvicorn API.endpoint:app --reload
 - Monitoramento de drift
 - Pipeline CI/CD
 
----
 
 ## 📌 Conclusão
 
