@@ -201,6 +201,8 @@ O projeto pode ser integrado com n8n para:
 │
 ├── models/       # Repositório de modelos
 │
+├── tests/       # Repositório de testes automatizados
+│
 ├── utils/        # Utilitários de ML
 │
 ├── main.ipynb    # Notebook principal
