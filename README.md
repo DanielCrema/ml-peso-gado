@@ -196,7 +196,7 @@ O projeto pode ser integrado com n8n para:
 │
 ├── tests/            # Repositório de testes automatizados
 │
-├── utils/            # Utilitários de ML
+├── ml_utils/            # Utilitários de ML
 │
 ├── version_control/  # Funções e logs de controle de versão
 │

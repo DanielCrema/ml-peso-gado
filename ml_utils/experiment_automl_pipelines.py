@@ -4,7 +4,7 @@ import automlx
 import pandas as pd
 from typing import Dict
 from typing import Literal
-from utils.evaluate_model import evaluate_model
+from ml_utils.evaluate_model import evaluate_model
 from export.export_model import export_model
 
 def export_experimental_models(experimental_models: dict[str, automlx._interface]) -> None: # type: ignore

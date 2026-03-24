@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from fastapi import FastAPI, Header, HTTPException
 from API.api_interface import PredictRequest, PredictResponse, Analise, Insights
 from API.predict import predict_weight
-from LLM.llm import generate_llm_analysis
+from LLM.analysis_agent import generate_llm_analysis
 
 load_dotenv()
 app = FastAPI()
