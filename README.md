@@ -12,6 +12,7 @@ A solução simula um cenário real do setor agropecuário, onde a pesagem manua
 - 🤖 Integração com LLM para análise inteligente do animal
 - 🔄 Base para automação com n8n
 - 🧠 Pipeline completo de Data Science documentado
+- ✅ Versionamento inteligente e deploy automatizado com pipeline CI/CD
 
 
 ## 🔌 Como usar a API
@@ -130,6 +131,10 @@ O [**notebook do projeto**](main.ipynb) cobre as principais etapas:
 ### 6. Exportação
 - Modelo salvo via `pickle`
 - Pronto para uso em produção
+- Pipeline CI/CD automatizado
+  - Versionamento
+  - Documentação
+  - Deploy
 
 
 ## 📊 Resultados
@@ -177,25 +182,27 @@ O projeto pode ser integrado com n8n para:
 
 ```bash
 .
-├── API/          # Configuração da API
+├── API/              # Configuração da API
 │
-├── data/         # Dados de entrada
+├── data/             # Dados de entrada
 │
-├── export/       # Módulo com funções para exportar modelos, artefatos e documentações
+├── export/           # Módulo com funções para exportar modelos, artefatos e documentações
 │
-├── helpers/      # Funções auxiliares de parseamento e plotagem
+├── helpers/          # Funções auxiliares de parseamento e plotagem
 │
-├── LLM/          # Agente(s) de IA para análise de gado
+├── LLM/              # Agente(s) de IA para análise de gado
 │
-├── models/       # Repositório de modelos
+├── models/           # Repositório de modelos
 │
-├── tests/       # Repositório de testes automatizados
+├── tests/            # Repositório de testes automatizados
 │
-├── utils/        # Utilitários de ML
+├── utils/            # Utilitários de ML
 │
-├── main.ipynb    # Notebook principal
+├── version_control/  # Funções e logs de controle de versão
 │
-└── loader.py     # Classe para carregar e armazenar informações dos datasets de entrada
+├── main.ipynb        # Notebook principal
+│
+└── loader.py         # Classe para carregar e armazenar informações dos datasets de entrada
 ```
 
 
@@ -222,7 +229,7 @@ uvicorn API.endpoint:app --reload
 - Deploy em cloud (AWS, GCP)
 - Versionamento automatizado de modelos
 - Monitoramento de drift
-- Pipeline CI/CD
+- Aprimorar o pipeline CI/CD
 
 
 ## 📌 Conclusão
