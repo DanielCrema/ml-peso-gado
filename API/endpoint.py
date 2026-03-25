@@ -37,10 +37,13 @@ def predict(data: PredictRequest, authorization: str = Header(None)):
         raise HTTPException(status_code=500, detail="Modelo preditivo não configurado")
 
     # Executa inferência
-    result = predict_weight(MODEL_ARTIFACT_NAME, dict(data))
+    try:
+        result = predict_weight(MODEL_ARTIFACT_NAME, dict(data))
 
-    peso_estimado = round(float(np.float64(result["peso_estimado_kg"])), 2)
-    versao_modelo = result["versao_modelo"]
+        peso_estimado = round(float(np.float64(result["peso_estimado_kg"])), 2)
+        versao_modelo = result["versao_modelo"]
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
     try:
         analise_dict = generate_llm_analysis(data, peso_estimado, GEMINI_API_KEY, GEMINI_MODEL_NAME)
