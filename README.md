@@ -1,20 +1,52 @@
 # 🐄 CattleWeight — Estimativa Inteligente de Peso de Gado
 
-O **CattleWeight** é um projeto de *Machine Learning* e *AI Automation* que estima o **peso de gado com base em características físicas**, expondo essa capacidade através de uma **API REST pronta para uso**.
+O **CattleWeight** é uma solução completa de *Machine Learning* e *AI Automation* que estima o **peso de gado com base em características físicas**, disponibilizando essa capacidade através de uma **API REST** e uma **interface web interativa**.
 
-A solução simula um cenário real do setor agropecuário, onde a pesagem manual pode gerar **imprecisão, inconsistência e baixa eficiência operacional**.
+A solução simula um cenário real do setor agropecuário, onde a pesagem manual pode gerar **imprecisão, inconsistência e baixa eficiência operacional**, oferecendo uma alternativa automatizada e escalável.
 
+🔗 **Frontend (React + Vite):**  
+https://github.com/DanielCrema/cattle-weight-frontend
+
+🎥 **Demo do Projeto:**  
+https://www.youtube.com/watch?v=EFLilugI94s
+
+🔗 **Repositório do frontend (REACT VITE):**  
+https://github.com/DanielCrema/cattle-weight-frontend
+
+🔗 **Demo do Projeto**
+https://www.youtube.com/watch?v=EFLilugI94s
 
 ## 🚀 O que este projeto entrega
 
 - 📊 Modelo de Machine Learning para regressão (peso em kg)
 - ⚡ API REST para predição em tempo real
 - 🤖 Integração com LLM para análise inteligente do animal
+- 🖥️ Interface web (React + Vite) para interação com o usuário
 - 🔄 Base para automação com n8n
 - 🧠 Pipeline completo de Data Science documentado
 - ✅ Versionamento inteligente e deploy automatizado com pipeline CI/CD
 - 🧪 Testes automatizados garantindo robustez da API, modelo preditivo e LLM
 
+## 🖥️ Interface Web (Frontend)
+
+O projeto conta com uma interface web desenvolvida em **React + Vite**, permitindo a interação direta com a API de forma simples e intuitiva.
+
+Funcionalidades:
+
+- Formulário para entrada de dados do animal
+- Consumo da API `/predict` em tempo real
+- Exibição estruturada dos resultados:
+  - Peso estimado
+  - Classificação
+  - Nível de risco
+  - Recomendações
+  - Insights gerados por IA
+- Feedback de carregamento e tratamento de erros
+
+Essa camada transforma a solução em um **produto utilizável**, não apenas um modelo ou API.
+
+🔗 Acesse o frontend:  
+https://github.com/DanielCrema/cattle-weight-frontend
 
 ## 🔌 Como usar a API
 
@@ -46,7 +78,7 @@ POST /predict
 {
   "peso_estimado_kg": 520.4,
   "versao_modelo": "v1",
-  "analise": {
+  "analise_IA": {
     "classificacao_peso": "adequado",
     "nivel_risco": "baixo",
     "recomendacoes": [
@@ -154,9 +186,9 @@ O [**notebook do projeto**](main.ipynb) cobre as principais etapas:
 ```
 [Client] → [FastAPI] → [Model + Encoder] → [Prediction]
                                ↓
-                            [LLM]
+                             [LLM]
                                ↓
-                            [n8n]
+                    [Frontend] / [n8n]
 ```
 
 
@@ -253,6 +285,27 @@ uvicorn API.endpoint:app --reload
 
 ## 📌 Conclusão
 
-O projeto demonstra a construção de uma solução completa de Machine Learning aplicada, indo desde a exploração de dados até a disponibilização via API e integração com sistemas automatizados.
+O projeto demonstra a construção de uma solução completa de Machine Learning aplicada, indo desde a exploração de dados até a disponibilização via API e interface web.
 
-Ele evidencia não apenas capacidade técnica, mas também **visão de produto e aplicação real de IA em negócios**.
+Mais do que um modelo preditivo, o CattleWeight representa um **produto funcional**, integrando:
+
+- Machine Learning
+- API REST
+- IA generativa (LLM)
+- Interface web
+- Automação de fluxos
+
+Evidenciando não apenas capacidade técnica, mas também **visão de produto e aplicação real de IA em negócios**.
+
+## *Special thanks* to:  
+🕋🤲 **Almighty God** (ﷻ), for having given me intelligence and persistence to persevere.
+
+Then:
+- [**Python community**](https://www.python.org/) for providing top-tier open-source libraries and resources.
+
+
+<p>
+    <a href="https://github.com/DanielCrema/oracle_one-data-science-course/blob/main/certificates/Daniel%20Borges%20Crema%20-%20Program%20ONE%20Certificate.pdf" target="_blank" rel="noreferrer">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/oracle/oracle-original.svg" alt="logo-oracle" style="width: 70px"/>  
+    </a>
+</p>
